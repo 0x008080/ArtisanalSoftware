@@ -1,24 +1,58 @@
 import '../style.css'
-import typescriptLogo from "../assets/typescript.svg"
-import { setupCounter } from './counter.ts'
+
 const { BASE_URL } = import.meta.env;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${BASE_URL}/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const app = document.getElementById('app');
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+app!.innerHTML = '';
+
+const homeSection = document.createElement('section');
+homeSection.className = 'home'
+
+const navBar = document.createElement('navbar');
+navBar.className = 'nav';
+
+const navlist = `
+    <nav id="nav">
+		<ul>
+			<li><a href="#about" class="active">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#education">Education</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#footer">Contact</a></li>
+		</ul>
+	</nav>
+`;
+
+
+// about
+const about = `
+    <div class="about">
+        <h1>Artisanal Software</h1>
+        <div class="about-content">
+            <p class="tagline">I do web, game development, and sometimes a combination of those two.</p>
+            <button class="cta" id="view-work">View My Work</button>
+        </div>
+    </div>
+  `;
+
+  // skills
+  const skills = `
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        ${['TypeScript', 'React', 'Node.js', 'AWS'].map(skill => `
+          <div class="skill-item">
+            <img src="/assets/${skill.toLowerCase()}-icon.svg" alt="${skill}">
+            <span>${skill}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  homeSection.innerHTML = about;
+  navBar.innerHTML = navlist;
+  app!.appendChild(homeSection);
+  app!.appendChild(navBar);
+ 
