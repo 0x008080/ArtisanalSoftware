@@ -2,28 +2,12 @@ import '../style.css'
 
 const { BASE_URL } = import.meta.env;
 
-const app = document.getElementById('app');
+/* const app = document.getElementById('app');
 
 app!.innerHTML = '';
 
 const homeSection = document.createElement('section');
 homeSection.className = 'home'
-
-const navBar = document.createElement('navbar');
-navBar.className = 'nav';
-
-const navlist = `
-    <nav id="nav">
-		<ul>
-			<li><a href="#about" class="active">About</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#footer">Contact</a></li>
-		</ul>
-	</nav>
-`;
-
 
 // about
 const about = `
@@ -52,7 +36,7 @@ const about = `
   `;
 
   homeSection.innerHTML = about;
-  navBar.innerHTML = navlist;
-  app!.appendChild(homeSection);
-  app!.appendChild(navBar);
+  //navBar.innerHTML = navlist;
+  app!.appendChild(homeSection); */
+  //app!.appendChild(navBar);
  
