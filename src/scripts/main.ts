@@ -1,6 +1,6 @@
 import '../style.css'
 
-const { BASE_URL } = import.meta.env;
+//const { BASE_URL } = import.meta.env;
 
 /* const app = document.getElementById('app');
 
