@@ -1,10 +1,6 @@
-
 /*
-
   Main Text Color: #c0c0c0
-  Alt Black: #1e1d1d
-1e1d1d
-  242424
+  Alt Black: #1e1d1d, #242424
 */
 
 :root {
@@ -24,7 +20,7 @@
 
 a {
   font-weight: 500;
-  color: #81829b;
+  color: #c0c0c0;
   text-decoration: inherit;
 }
 a:hover {
@@ -116,8 +112,33 @@ h1 {
   background: #1e1d1d;
 }
 
+/*
+  Containers for 
+*/
+
 .about {
   padding-top: 80px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.project-card {
+  background: #242424;
+  border-radius: 10px;
+  padding: 2.5rem;
+  min-height: 300px;
+  min-width: 200px; 
+}
+
+.skills {
+  display: block
+  
 }
 
 button {
@@ -127,7 +148,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #242424;
+  background-color: #1e1d1d;
   cursor: pointer;
   transition: border-color 0.25s;
 }
