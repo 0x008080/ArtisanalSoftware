@@ -1,5 +1,7 @@
 /// <reference types="vite/client" />
 
-export default {
-    base: '/ArtisanalSoftare/',
-  };
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/', // Use root-relative paths
+});
