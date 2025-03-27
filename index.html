@@ -24,6 +24,7 @@
       <!-- About -->
       <section id="about-section">
         <div class="about" id="about">
+          <h2 id="banner-text"> Beautiful, Hand Crafted</h2>
           <h1 class="artisanal">Artisanal Software</h1>
           <!-- <p>Beautiful hand crafted, GMO Free, Gluten Free, MSG Free, Vegan Friendly</p> -->
           <div class="about-content">
@@ -48,7 +49,7 @@
               <b>Technologies: </b> <em>Python, OpenCV, easyOCR, TCGdex API</em>
             </h5>
             <h5>
-              In progress
+              Project in progress.
             </h5>
           </div>
 
@@ -63,22 +64,7 @@
               and lab sessions by pinpointing exact classroom locations at UCSC. 
               This was a group project for my Software Engineering course at UCSC. 
             </h5>
-            <a href="https://github.com">GitHub Repository</a>
-          </div>
-
-          <div class="project-card">
-            <p><b>Multithreaded HTTP Server</b></p>
-            <img src="src/assets/c.png" class="project-images">
-            <h5>
-              <b>Technologies: </b> <em>C, Linux system calls</em>
-            </h5>
-            <h5>
-              An HTTP server that accepts requests for reading/writing files from/to the server. 
-              Server is designed to use multiple data structures that track reader/writer mutexes in order to ensure concurrency.
-              Implementation uses threads that read into a buffer, parse requests using regex, and return a response once a
-              request is complete.
-            </h5>
-            <a href="https://github.com">GitHub Repository</a>
+            <a href="https://github.com/daskrys/Slug-Find">GitHub Repository</a>
           </div>
 
           <div class="project-card">
@@ -94,20 +80,6 @@
           </div>
 
           <div class="project-card">
-            <p><b>Bite Sized Dungeons</b></p>
-            <img src="src/assets/bite-sized-d.jpg" class="project-images">
-            <h5>
-              <b>Technologies: </b> <em>TypeScript, JavaScript, Phaser 3, Vite, Node.js, Socket.IO</em>
-            </h5>
-            <h5>
-              An online multiplayer game prototype with full client-server functionality. Client design allows for future integration of localization to any language via JSON. 
-              Client was deployed via GitHub Pages and connects to a Node.js server hosted on Glitch. Once connected, players are able to move around in a shared room made possible 
-              by syncronizing the server state to connected clients.
-            </h5>
-            <a href="https://github.com">GitHub Repository</a>
-          </div>
-
-          <div class="project-card">
             <p><b>GreenBot</b></p>
             <img src="src/assets/NASA_logo.png" style="width: 150px; height: auto;">
             <h5>
@@ -117,8 +89,50 @@
               This project was part of the NASA California Space Grant Consortium 2019 done through Orange Coast College. Over the course of 2 months, we designed and built a rover using the VEX platform, an Arduino microcontroller for the sensors (soil moisture, photoresistor, temperature), and a phone application for output (using Blynk IoT). 
               Team consisted of 4 members and project concluded with a presentation at NASA Armstrong Flight Research Center. I was the programmer throughout this project. 
             </h5>
-            <a href="https://github.com">GitHub Repository</a>
+            <a href="https://github.com/daskrys/GreenBot">GitHub Repository</a>
           </div>
+
+          <div class="project-card">
+            <p><b>Bite Sized Dungeons</b></p>
+            <img src="src/assets/bite-sized-d.jpg" class="project-images">
+            <h5>
+              <b>Technologies: </b> <em>TypeScript, JavaScript, Phaser 3, Vite, Node.js, Socket.IO</em>
+            </h5>
+            <h5>
+              A multiplayer prototype with full client-server functionality. Client design allows for future integration of localization to any language via JSON. 
+              Client was deployed via GitHub Pages and connects to a Node.js server hosted on Glitch. Once connected, players are able to move around in a shared room made possible 
+              by syncronizing the server state to connected clients.
+            </h5>
+            <a href="https://github.com/daskrys/Socket-Prototype">GitHub Repository</a>
+          </div>
+
+          <div class="project-card">
+            <p><b>Project Archives</b></p>
+            <img src="src/assets/gh.png" class="project-images">
+            <h5>
+              
+            </h5>
+            <a href="https://github.com/0x008080">Current GitHub</a>
+            <a href="https://github.com/daskrys">GitHub Archive I</a>
+            <a href="https://github.com">GitHub Archive  II</a>
+            <br>
+            <a href="">Unreal Engine 5 Cinematics</a>
+          </div>
+
+          <!-- <div class="project-card">
+            <p><b>Multithreaded HTTP Server</b></p>
+            <img src="src/assets/c.png" class="project-images">
+            <h5>
+              <b>Technologies: </b> <em>C, Linux system calls</em>
+            </h5>
+            <h5>
+              An HTTP server that accepts requests for reading/writing files from/to the server. 
+              Server is designed to use multiple data structures that track reader/writer mutexes in order to ensure concurrency.
+              Implementation uses threads that read into a buffer, parse requests using regex, and return a response once a
+              request is complete.
+            </h5>
+            <a href="https://github.com">GitHub Repository</a>
+          </div> -->
 
         </div>
       </section>
@@ -134,10 +148,59 @@
             <div>
               <h2>University of California, Santa Cruz</h2>
               <h3>Computer Science, B.S.</h3>
-              <p>GPA: 3.61/4,00</p>
+              <p>GPA: 3.61/4.00</p>
+            </div>
+          </div>
+          <div class="courses">
+            <div class="courses-header">
+              <h2>Relevant Coursework</h2>
+              <button id="btn">Expand</button>
             </div>
             
-            
+            <div id="courses-content" class="courses-content">
+              <div class="courses-grid">
+
+                <div class="course-column">
+
+                  <h3>Mathematics</h3>
+                  <ul>
+                    <li>Calculus I</li>
+                    <li>Calculus II</li>
+                    <li>Calculus III</li>
+                    <li>Calculus Based Physics: Mechanics</li>
+                    <li>Intro to Linear Algebra & Differential Equations</li>
+                    <li>Discrete Structures & Boolean Algebra</li>
+                  </ul>
+                </div>
+
+                <div class="course-column">
+                  <h3>Computer Science</h3>
+                  <ul>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Database Systems</li>
+                    <li>Computer Architecture</li>
+                    <li>Intro to Software Engineering</li>
+                    <li>Principles of Computer Systems Design</li>
+                    <li>C/C++ Programming I & II</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Advanced Programming</li>
+                  </ul>
+                </div>
+
+                <div class="course-column">
+                  <h3>Game Design & Development</h3>
+                  <ul>
+                    <li>Game Development Patterns</li>
+                    <li>Game Development Experience</li>
+                    <li>Game Design Experience</li>
+                    <li>Game Design Studio I</li>
+                    <li>Game Design Studio II</li>
+                    <li>Game Production Studio</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -153,7 +216,7 @@
       -->
 
       <!-- Contact -->
-      <section>
+      <section id="contact-section">
         <h2>Contact</h2>
         <div class="contact">
           <div class="">

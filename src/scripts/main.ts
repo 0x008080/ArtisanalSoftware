@@ -1,42 +1,52 @@
-import '../style.css'
+
+import '../style.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.courses-header');
+  header?.addEventListener('click', toggleCourses);
+});
+
+document.addEventListener('DOMContentLoaded', ()=> {
+
+  setTimeout(()=> rotateBannerText(3500), 5000);
+});
+
+let buttonLabel:string = 'Hide';
+let currentIndex = 0;
+const descriptions:string[] = ['GMO Free', 'Gluten Free', 'MSG Free', 'Vegan Approved', 'Ethically Sourced',
+  'Dairy Free', 'Cholesterol Free', 'Antioxidant Packed', 'Preservative Free', 'Nut Free', 'Soy Free', 'Zero Waste',
+  'Peanut Free', 'BPA Free', 'Homebrewed', 'Toxin Free', 'Pesticide Free', 'Unleaded'];
+
+function toggleCourses() {
+  const content = document.getElementById('courses-content');
+  content?.classList.toggle('active');
+  const buttn = document.getElementById('btn');
+  //buttn!.innerHTML = '<b>New Text</b>';
+  let tempstr:string = buttn!.innerHTML;
+  buttn!.innerHTML = `${buttonLabel}`
+  buttonLabel = tempstr;
+}
+
+function rotateBannerText(interval: number = 3500) {
+  const banner = document.getElementById('banner-text');
+  const len = descriptions.length;
+  banner!.textContent = descriptions[currentIndex];
+
+  setInterval(() => {
+    currentIndex = Math.floor(Math.random() * len);
+    banner!.textContent = descriptions[currentIndex];
+    
+    // Optional: Add fade animation
+    banner?.classList.add('fade');
+    setTimeout(() => banner?.classList.remove('fade'), 500);
+  }, interval);
+}
+
 
 //const { BASE_URL } = import.meta.env;
 
 /* const app = document.getElementById('app');
 
-app!.innerHTML = '';
+ */
 
-const homeSection = document.createElement('section');
-homeSection.className = 'home'
-
-// about
-const about = `
-    <div class="about">
-        <h1>Artisanal Software</h1>
-        <div class="about-content">
-            <p class="tagline">I do web, game development, and sometimes a combination of those two.</p>
-            <button class="cta" id="view-work">View My Work</button>
-        </div>
-    </div>
-  `;
-
-  // skills
-  const skills = `
-    <div class="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        ${['TypeScript', 'React', 'Node.js', 'AWS'].map(skill => `
-          <div class="skill-item">
-            <img src="/assets/${skill.toLowerCase()}-icon.svg" alt="${skill}">
-            <span>${skill}</span>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
-
-  homeSection.innerHTML = about;
-  //navBar.innerHTML = navlist;
-  app!.appendChild(homeSection); */
-  //app!.appendChild(navBar);
  

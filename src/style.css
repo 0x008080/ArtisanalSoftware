@@ -1,6 +1,7 @@
 /*
   Main Text Color: #c0c0c0
-  Alt Black: #1e1d1d, #242424
+  Alt Blacks: #1e1d1d, #242424
+  Blue Hover: #23638b
 */
 
 :root {
@@ -119,7 +120,7 @@ h5 {
 */
 
 .about {
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 .education {
@@ -147,6 +148,67 @@ h5 {
   #1e1d1d 10%,
   #1e1d1d 0%
   );
+}
+
+.courses {
+  text-align: center;
+  display: block;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.course-column {
+  background: #1e1d1d;
+  border-radius: 15px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(230, 229, 229, 0.1);
+}
+
+.course-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.course-column li {
+  margin: 0.2em 0;
+  padding: 0rem;
+  background: #1e1d1d;
+}
+
+.courses-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.2s ease;
+  opacity: 0;
+}
+
+.courses-content.active {
+  max-height: 500px; /* Adjust based on content height */
+  opacity: 1;
+}
+
+.courses-header {
+  cursor: pointer;
+  transition: all 0.75s ease;
+}
+
+.courses-header:hover {
+  color: #23638b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .projects {
@@ -189,7 +251,7 @@ button {
 }
 
 button:hover {
-  border-color: #c0c0c0;
+  border-color: #23638b;
 }
 
 button:focus,
@@ -207,5 +269,12 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
   }
 }
