@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
   setTimeout(()=> rotateBannerText(2250), 5000);
 });
 
-
 function toggleCourses() {
   const content:HTMLElement | null = document.getElementById('courses-content');
   content?.classList.toggle('active');
