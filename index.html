@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="src/assets/slug2.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artisanal Software</title>
   </head>
@@ -13,11 +13,11 @@
       <!-- Nav Bar -->
       <nav class="nav">
         <ul>
-          <li><a href="#about-section" class="active">About</a></li>
-          <li><a href="#education-section" class="active">Education</a></li>
-          <li><a href="#projects-section" class="active">Projects</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#education-section">Education</a></li>
+          <li><a href="#projects-section">Projects</a></li>
           <!--<li><a href="#skills" class="active">Skills</a></li> -->
-          <li><a href="#contact-section" class="active">Contact</a></li>
+          <li><a href="#contact-section">Contact</a></li>
         </ul>
       </nav>
       
@@ -25,11 +25,13 @@
       <section id="about-section">
         <div class="about" id="about">
           <h1 class="artisanal">Artisanal Software</h1>
+          <!-- <p>Beautiful hand crafted, GMO Free, Gluten Free, MSG Free, Vegan Friendly</p> -->
           <div class="about-content">
             <br>
             <h2>About</h2>
-            <h3>My name is Christian. I do web, game development, and sometimes a combination of those two. <br>
-              Currently seeking software related job opportunities.
+            <h3>My name is Christian Perez,<br><br>I'm always trying to stay sharp through continous learning and improvement.
+                I do web, game development, and sometimes a combination of those two. I'm currently looking for software-focused roles where I can keep growing, take on interesting challenges, 
+                and meet amazing people.
             </h3>
           </div>
         </div>
@@ -41,55 +43,83 @@
         <div class="projects">
           <div class="project-card">
             <p><b>TCG Visualizer</b></p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <img src="src/assets/tcg.png" class="project-images">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>Python, OpenCV, easyOCR, TCGdex API</em>
             </h5>
-            <button>GitHub Repo</button>
+            <h5>
+              In progress
+            </h5>
           </div>
+
           <div class="project-card">
-            <p><b>SlugFind</b></p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <p><b>SlugFind</b> </p>
+            <img src="src/assets/slug2.jpg" class="project-images">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Android Studio, aGoogle Maps API</em>
             </h5>
             <h5>
-              This is a community based classroom locator that allows students to help other students find their classes, discussion sessions, and lab sessions by pinpointing exact room locations on the UCSC map. This was the group project for my Software Engineering course at UCSC. 
+              Community based classroom locator that allows students to help other students find their classes, discussion sessions, 
+              and lab sessions by pinpointing exact classroom locations at UCSC. 
+              This was a group project for my Software Engineering course at UCSC. 
             </h5>
-            <button>GitHub Repo</button>
+            <a href="https://github.com">GitHub Repository</a>
           </div>
+
           <div class="project-card">
             <p><b>Multithreaded HTTP Server</b></p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <img src="src/assets/c.png" class="project-images">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>C, Linux system calls</em>
             </h5>
-            <button>GitHub Repo</button>
+            <h5>
+              An HTTP server that accepts requests for reading/writing files from/to the server. 
+              Server is designed to use multiple data structures that track reader/writer mutexes in order to ensure concurrency.
+              Implementation uses threads that read into a buffer, parse requests using regex, and return a response once a
+              request is complete.
+            </h5>
+            <a href="https://github.com">GitHub Repository</a>
           </div>
+
           <div class="project-card">
             <p>Poké-Location</p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <img src="src/assets/mb.png" class="project-images">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>Python, PokéAPI, Kivy</em>
             </h5>
-            <button>GitHub Repo</button>
+            <h5>
+              Desktop application that takes user input and makes a request to the RESTful API, PokéAPI. Program returns the in-game location of any Pokémon. 
+            </h5>
+            <a href="https://github.com/daskrys/Poke-Location">GitHub Repository</a>
           </div>
+
           <div class="project-card">
             <p><b>Bite Sized Dungeons</b></p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <img src="src/assets/bite-sized-d.jpg" class="project-images">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>TypeScript, JavaScript, Phaser 3, Vite, Node.js, Socket.IO</em>
             </h5>
-            <button>GitHub Repo</button>
+            <h5>
+              An online multiplayer game prototype with full client-server functionality. Client design allows for future integration of localization to any language via JSON. 
+              Client was deployed via GitHub Pages and connects to a Node.js server hosted on Glitch. Once connected, players are able to move around in a shared room made possible 
+              by syncronizing the server state to connected clients.
+            </h5>
+            <a href="https://github.com">GitHub Repository</a>
           </div>
+
           <div class="project-card">
-            <p><b>GreenBot</b>></p>
-            <img src="src/assets/typescript.svg" style="width: 150px; height: auto;">
+            <p><b>GreenBot</b></p>
+            <img src="src/assets/NASA_logo.png" style="width: 150px; height: auto;">
             <h5>
-              <b>Technologies: </b> <em>Flutter, Dart, Firebase, Google Maps API.</em>
+              <b>Technologies: </b> <em>C, C++, VEX Platform, Blynk IoT, Arduino</em>
             </h5>
-            <button>GitHub Repo</button>
+            <h5>
+              This project was part of the NASA California Space Grant Consortium 2019 done through Orange Coast College. Over the course of 2 months, we designed and built a rover using the VEX platform, an Arduino microcontroller for the sensors (soil moisture, photoresistor, temperature), and a phone application for output (using Blynk IoT). 
+              Team consisted of 4 members and project concluded with a presentation at NASA Armstrong Flight Research Center. I was the programmer throughout this project. 
+            </h5>
+            <a href="https://github.com">GitHub Repository</a>
           </div>
+
         </div>
       </section>
 
