@@ -4,7 +4,7 @@ import '../style.css';
 const descriptions:string[] = ['GMO Free', 'Gluten Free', 'MSG Free', 'Vegan Approved', 'Ethically Sourced',
   'Dairy Free', 'Cholesterol Free', 'Antioxidant Packed', 'Preservative Free', 'Nut Free', 'Soy Free', 'Zero Waste', 'Nitrate Free',
   'Peanut Free', 'BPA Free', 'Homebrewed', 'Toxin Free', 'Pesticide Free', 'Unleaded', 'Sulfite Free', 'Water Resistant',
-  'Vitamin Infused', 'Omega-3 Loaded', 'Bee Friendly,', 'Allergen Free', 'Carcinogen Free', 'Boldly Spiced', 'Glyphosate Free', 
+  'Vitamin Infused', 'Omega-3 Loaded', 'Bee Friendly', 'Allergen Free', 'Carcinogen Free', 'Boldly Spiced', 'Glyphosate Free', 
   'Fire-Roasted', 'Hand Carved', 'Cold Brewed', 'Forged In Fire', 'Fully Distilled', 'Oven-Baked', 'Sun Dried'];
 
 let buttonLabel:string = 'Hide';
