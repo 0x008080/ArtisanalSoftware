@@ -1,6 +1,16 @@
 
 import '../style.css';
 
+const descriptions:string[] = ['GMO Free', 'Gluten Free', 'MSG Free', 'Vegan Approved', 'Ethically Sourced',
+  'Dairy Free', 'Cholesterol Free', 'Antioxidant Packed', 'Preservative Free', 'Nut Free', 'Soy Free', 'Zero Waste', 'Nitrate Free',
+  'Peanut Free', 'BPA Free', 'Homebrewed', 'Toxin Free', 'Pesticide Free', 'Unleaded', 'Sulfite Free', 'Water Resistant',
+  'Vitamin Infused', 'Omega-3 Loaded', 'Bee Friendly,', 'Allergen Free', 'Carcinogen Free', 'Boldly Spiced', 'Glyphosate Free', 
+  'Fire-Roasted', 'Hand Carved', 'Cold Brewed', 'Forged In Fire', 'Fully Distilled', 'Oven-Baked', 'Sun Dried'];
+
+let buttonLabel:string = 'Hide';
+const len:number = descriptions.length;
+let currentIndex:number = Math.floor(Math.random() * len);
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.courses-header');
   header?.addEventListener('click', toggleCourses);
@@ -8,27 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
-  setTimeout(()=> rotateBannerText(3500), 5000);
+  setTimeout(()=> rotateBannerText(2250), 5000);
 });
 
-let buttonLabel:string = 'Hide';
-const descriptions:string[] = ['GMO Free', 'Gluten Free', 'MSG Free', 'Vegan Approved', 'Ethically Sourced',
-  'Dairy Free', 'Cholesterol Free', 'Antioxidant Packed', 'Preservative Free', 'Nut Free', 'Soy Free', 'Zero Waste',
-  'Peanut Free', 'BPA Free', 'Homebrewed', 'Toxin Free', 'Pesticide Free', 'Unleaded'];
-const len = descriptions.length;
-let currentIndex = Math.floor(Math.random() * len);
 
 function toggleCourses() {
-  const content = document.getElementById('courses-content');
+  const content:HTMLElement | null = document.getElementById('courses-content');
   content?.classList.toggle('active');
-  const buttn = document.getElementById('btn');
-  //buttn!.innerHTML = '<b>New Text</b>';
-  let tempstr:string = buttn!.innerHTML;
-  buttn!.innerHTML = `${buttonLabel}`
+
+  const button:HTMLElement | null = document.getElementById('btn');
+  let tempstr:string = button!.innerHTML;
+  button!.innerHTML = `${buttonLabel}`
   buttonLabel = tempstr;
 }
 
-function rotateBannerText(interval: number = 3500) {
+function rotateBannerText(interval: number = 2250) {
   const banner = document.getElementById('banner-text');
   banner!.textContent = descriptions[currentIndex];
 

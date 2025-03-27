@@ -64,11 +64,11 @@ h5 {
 }
 
 .artisanal {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  line-height: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 0rem;
   font-size: 3.25em;
   text-align: left;
-  
+  font-style: italic;
 }
 
 .card {
@@ -136,7 +136,8 @@ h5 {
   gap: 1rem;
   margin: 10 auto;
   background: #1e1d1d;
-  padding: 2rem;
+  padding: 1.5rem;
+  text-align: left;
 }
 
 .edu-logo {
@@ -236,6 +237,10 @@ h5 {
 
 .skills {
   display: block
+}
+
+.email  {
+  font-size: 1.25em;
 }
 
 button {
