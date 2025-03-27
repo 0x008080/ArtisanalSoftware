@@ -12,10 +12,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
 });
 
 let buttonLabel:string = 'Hide';
-let currentIndex = 0;
 const descriptions:string[] = ['GMO Free', 'Gluten Free', 'MSG Free', 'Vegan Approved', 'Ethically Sourced',
   'Dairy Free', 'Cholesterol Free', 'Antioxidant Packed', 'Preservative Free', 'Nut Free', 'Soy Free', 'Zero Waste',
   'Peanut Free', 'BPA Free', 'Homebrewed', 'Toxin Free', 'Pesticide Free', 'Unleaded'];
+const len = descriptions.length;
+let currentIndex = Math.floor(Math.random() * len);
 
 function toggleCourses() {
   const content = document.getElementById('courses-content');
@@ -29,7 +30,6 @@ function toggleCourses() {
 
 function rotateBannerText(interval: number = 3500) {
   const banner = document.getElementById('banner-text');
-  const len = descriptions.length;
   banner!.textContent = descriptions[currentIndex];
 
   setInterval(() => {
